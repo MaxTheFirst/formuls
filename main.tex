@@ -1,0 +1,133 @@
+\documentclass[a4paper,14pt]{article}
+\input{preamble.tex}
+
+\title{Формулы}
+\date{}
+
+\begin{document}
+    \maketitle
+    \section{Гиперболические функции.}
+    \[\sh x=\frac{e^x-e^{-x}}{2}\]
+    \[\ch x=\frac{e^x+e^{-x}}{2}\]
+    \section{Производные.}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $c'=0, c=const$
+            \item $\left(x^n\right)'=nx^{n-1}$
+            \item $\left(a^x\right)'=a^x\cdot \ln a$
+            \item $\left(e^x\right)'=e^x$
+            \item $\left(\ln x\right)'=\frac 1x$
+            \item $\left(\log_a x\right)'=\frac{1}{x \ln a}$
+            \item $\left(\sqrt x\right)'=\frac{1}{2\sqrt x}$
+            \item $\left(\sin x\right)'=\cos x$
+            \item $\left(\cos x\right)'=-\sin x$
+            \item $\left(\tg x\right)'=\frac{1}{\cos^2x}$
+            \item $\left(\ctg x\right)'=-\frac{1}{\sin^2 x}$
+            \item $\left(\arcsin x\right)'=\frac{1}{\sqrt{1-x^2}}$
+            \item $\left(\arccos x\right)'=-\frac{1}{\sqrt{1-x^2}}$
+            \item $\left(\arctg x\right)'=\frac{1}{1+x^2}$
+            \item $\left(\arcctg x\right)'=-\frac{1}{1+x^2}$
+            \item $\left(\sh x\right)'=\ch x$
+            \item $\left(\ch x\right)'=\sh x$
+            \item $\left(\th x\right)'=\frac{1}{\ch^2x}$
+            \item $\left(\cth x\right)'=-\frac{1}{\sh^2x}$
+        \end{enumerate}
+    \end{multicols}
+    \section{Первая производная от параметрической функции.}
+    \[y_x'=\frac{dy}{dx}=\frac{dy}{dt}\cdot \frac{dt}{dx}=\frac{y_t'}{x_t'}\]
+    \section{Вторая производная от параметрической функции.}
+    \[y_{xx}''=\left(\frac{y_t'}{x_t'}\right)_t'\cdot t_x'=\frac{y_{tt}''x_t'-x_{tt}''y_t'}{(x_t')^2}\cdot \frac{1}{x_t'}=\frac{y_{tt}''x_t'-x_{tt}''y_t'}{(x_t')^3}\]
+    \section{Производные высших порядков.}
+    \begin{enumerate}
+        \item $f^{(n)}(x)=\frac{d^nf(x)}{dx^n}$
+        \item $f^{(n)}(x)=\left(f^{(n-1)}(x)\right)', n\in \NN$
+        \item $(a^x)^{(n)}=a^x \ln^n a$
+        \item $(e^x)^{(n)}=e^x$
+        \item $\left(\sin ax\right)^{(n)}=a^n\sin(ax+\frac{\pi n}{2})$
+        \item $\left(\cos ax\right)^{(n)}=a^n\cos(ax+\frac{\pi n}{2})$
+        \item $\left((ax+b)^\alpha\right)^{(n)}=a^n\alpha(\alpha-1)\dots(\alpha-n+1)(ax+b)^{\alpha-n}$
+        \item $\left(\log_a |x|\right)^{(n)}=\frac{(-1)^{n-1}(n-1)!}{x^n\ln a}$
+        \item $\left(\ln |x|\right)^{(n)}=\frac{(-1)^{n-1}(n-1)!}{x^n}$
+    \end{enumerate}
+    \section{Формула Лейбница.}
+    \[(uv)^n=\sum_{k=0}^n C_n^k u^{(n-k)}v^{(k)}\]
+    \section{Формула Тейлора.}
+    \begin{align}
+        &f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \cdots \nonumber \\
+        &\quad + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + o\left((x - x_0)^n\right), \quad x \rightarrow x_0 \nonumber\\
+        &f(x)=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^n+ o\left((x - x_0)^n\right), \quad x \rightarrow x_0
+    \end{align}
+    \section{Формула Маклорена.}
+    \subsection{Общий вид.}
+    \begin{align}
+        f(x)=\sum_{k=0}^{n} \frac{f^{(k)}(0)}{k!} x^k+o(x^n), \quad x \rightarrow 0
+    \end{align}
+    \subsection{Для четной функции.}
+    \begin{align}
+        f(x)=\sum_{k=0}^{n} \frac{f^{(2k)}(0)}{(2k)!} x^{2k} + o(x^{2n+1})
+    \end{align}
+    \subsection{Для нечетной функции.}
+    \begin{align}
+        f(x)=\sum_{k=0}^{n} \frac{f^{(2k+1)}(0)}{(2k+1)!} x^{2k+1} + o(x^{2n+2})
+    \end{align}
+    \subsection{Частые функции.}
+    \begin{align}
+        &e^x=1+x+\frac{x^2}{2!}+\cdots+\frac{x^n}{n!}+o(x^n) \nonumber \\
+        &e^x=\sum_{k=0}^{n} \frac{x^k}{k!}+o(x^n)
+    \end{align}
+    \begin{align}
+        &\sh x=x+\frac{x^3}{3!}+\frac{x^5}{5!}+\cdots+\frac{x^{2n+1}}{(2n+1)!}+o(x^{2n+2})\nonumber \\
+        &\sh x=\sum_{k=0}^{n} \frac{x^{2k+1}}{(2k+1)!}+o(x^{2n+2})
+    \end{align}
+    \begin{align}
+        &\ch x=1+\frac{x^2}{2!}+\frac{x^4}{4!}+\cdots+\frac{x^{2n}}{(2n)!}+o(x^{2n+1})\nonumber \\
+        &\ch x=\sum_{k=0}^{n} \frac{x^{2k}}{(2k)!}+o(x^{2n+1})
+    \end{align}
+    \begin{align}
+        &\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}+\cdots+\frac{(-1)^nx^{2n+1}}{(2n+1)!}+o(x^{2n+2})\nonumber \\
+        &\sin x=\sum_{k=0}^{n} (-1)^k \frac{x^{2k+1}}{(2k+1)!}+o(x^{2n+2})
+    \end{align}
+    \begin{align}
+        &\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}+\cdots+\frac{(-1)^nx^{2n}}{(2n)!}+o(x^{2n+1})\nonumber \\
+        &\cos x=\sum_{k=0}^{n} (-1)^k \frac{x^{2k}}{(2k)!}+o(x^{2n+1})
+    \end{align}
+    \begin{align}
+        &(1+x)^\alpha=1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+o(x^n)\nonumber \\
+        &(1+x)^\alpha=\sum_{k=0}^{n} C_\alpha^kx^k+o(x^n),
+    \end{align}
+    где $C_\alpha^0=1$, $C_\alpha^k=\frac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!}$
+    \begin{align}
+        &\frac{1}{1+x}=\sum_{k=0}^{n} (-1)^nx^k+o(x^n)
+    \end{align}
+    \begin{align}
+        &\frac{1}{1-x}=\sum_{k=0}^{n} x^k+o(x^n)
+    \end{align}
+    \begin{align}
+        \frac{1}{\sqrt{1-x}}=(1-x)^{-1/2}=\sum_{k=1}^{n} (-1)^k C_{-1/2}^{k}x^k+o(x^n)
+    \end{align}
+    где
+    \[C_{-1/2}^k=\frac{(-1/2)(-1/2-1)\cdots(-1/2-k+1)}{k!}=(-1)^k \frac{(2k-1)!!}{2^kk!}\]
+    \[(2k-1)!!=1\cdot 3\cdot 5\cdots(2k-1)\]
+    \begin{align}
+        &\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}+\cdots+\frac{(-1)^{n-1}x^n}{n}+o(x^n) \nonumber\\
+        &\ln(1+x)=\sum_{k=1}^{n}\frac{(-1)^{k-1}x^k}{k}+o(x^n) 
+    \end{align}
+    \begin{align}
+        \ln(1-x)=-\sum_{k=1}^{n} \frac{x^k}{k}+o(x^n)
+    \end{align}
+    \begin{align}
+        \frac{1}{1+x^2}=\sum_{k=0}^{n} (-1)^kx^{2k}+o(x^{2n+1})
+    \end{align}
+    \subsection{Формула из производной}
+    Если 
+    \[f'=\sum_{k=0}^{n} b_k(x-x_0)^k+o\left((x-x_0)^n\right)\], то 
+    \begin{align}
+        f(x)=f(x_0)+\sum_{k=0}^{n} \frac{b_k}{k+1}(x-x_0)^{k+1}+o\left((x-x_0)^{n+1}\right)
+    \end{align}
+    \subsection{Еще функции.}
+    \begin{align}
+        \tg x = x+\frac{x^3}{3}+\frac{2x^5}{15}+o(x^5)
+    \end{align}
+
+\end{document}
+
