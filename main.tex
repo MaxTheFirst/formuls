@@ -45,7 +45,7 @@
         \item $(e^x)^{(n)}=e^x$
         \item $\left(\sin ax\right)^{(n)}=a^n\sin(ax+\frac{\pi n}{2})$
         \item $\left(\cos ax\right)^{(n)}=a^n\cos(ax+\frac{\pi n}{2})$
-        \item $\left((ax+b)^\alpha\right)^{(n)}=a^n\alpha(\alpha-1)\dots(\alpha-n+1)(ax+b)^{\alpha-n}$
+        \item $\left((ax+b)^\alpha\right)^{(n)}=a^n\alpha(\alpha-1)\dots(\alpha-n+1)(ax+b)^{\alpha-n}=a^nC_\alpha ^n n!(ax+b)^{\alpha-n}$
         \item $\left(\log_a |x|\right)^{(n)}=\frac{(-1)^{n-1}(n-1)!}{x^n\ln a}$
         \item $\left(\ln |x|\right)^{(n)}=\frac{(-1)^{n-1}(n-1)!}{x^n}$
     \end{enumerate}
@@ -103,7 +103,7 @@
         &\frac{1}{1-x}=\sum_{k=0}^{n} x^k+o(x^n)
     \end{align}
     \begin{align}
-        \frac{1}{\sqrt{1-x}}=(1-x)^{-1/2}=\sum_{k=1}^{n} (-1)^k C_{-1/2}^{k}x^k+o(x^n)
+        \frac{1}{\sqrt{1-x}}=(1-x)^{-1/2}=\sum_{k=0}^{n} C_{-1/2}^{k} (-1)^k x^k+o(x^n)
     \end{align}
     где
     \[C_{-1/2}^k=\frac{(-1/2)(-1/2-1)\cdots(-1/2-k+1)}{k!}=(-1)^k \frac{(2k-1)!!}{2^kk!}\]
@@ -128,6 +128,69 @@
     \begin{align}
         \tg x = x+\frac{x^3}{3}+\frac{2x^5}{15}+o(x^5)
     \end{align}
-
+    \begin{align}
+        \ctg x = x^{-1}-\frac{x}{3}-\frac{x^3}{45}-\frac{2x^5}{945}+o(x^5)
+    \end{align}
+    \begin{align}
+        &\arcsin x=x+\frac{x^3}{6}+\frac{3x^5}{40}+o(x^6)\nonumber \\
+        &(\arcsin x)'=\frac{1}{\sqrt{1-x^2}}=\sum_{k=0}^n C_{-1/2}^k x^{2k}+o(x^{2n+1}) \nonumber \\
+        &\arcsin x =x+\sum_{k=1}^n C_{-1/2}^k \frac{x^{2k+1}}{2k+1}+o(x^{2n+2})
+    \end{align}
+    \begin{align}
+        &\arccos x=\frac{\pi}{2}-x-\frac{x^3}{6}-\frac{3x^5}{40}+o(x^6)\nonumber \\
+        &\arccos x=\frac{\pi}{2}-\arcsin x=\frac{\pi}{2}-x-\sum_{k=1}^n C_{-1/2}^k \frac{x^{2k+1}}{2k+1}+o(x^{2n+2})
+    \end{align}
+    \begin{align}
+        &\arctg x = x-\frac{x^3}{3}+\frac{x^5}{5}+o(x^6) \nonumber \\
+        &(\arctg x)' =\frac{1}{1+x^2}=\sum_{k=0}^n (-1)^k x^{2k}+o(x^{2n+1}) \nonumber \\
+        &\arctg x=\sum_{k=0}^n (-1)^k \frac{x^{2k+1}}{2k+1}+o(x^{2n+2})
+    \end{align}
+    \begin{align}
+        &\arcctg x = \frac{\pi}{2}-x+\frac{x^3}{3}-\frac{x^5}{5}+o(x^6) \nonumber \\
+        &\arcctg x=\frac{\pi}{2}-\arctg x=\frac{\pi}{2}-\sum_{k=0}^n (-1)^k \frac{x^{2k+1}}{2k+1}+o(x^{2n+2})
+    \end{align}
+    \begin{align}
+        \th x=x-\frac{x^3}{3}+\frac{2x^5}{15}+o(x^6)
+    \end{align}
+    '\begin{align}
+        \cth x = x^{-1}+\frac{x}{3}-\frac{x^3}{45}+\frac{2x^5}{945}+o(x^6)
+    \end{align}
+    \section{Кривые.}
+    \subsection{Кривизна}
+    \[k=\frac{|[r', r'']|}{|r'|^3}\]
+    \subsection{Кручение.}
+    \[\chi=\frac{(r', r'', r''')}{k^2 |r'|^6}=\frac{(r', r'', r''')}{|[r', r'']|^2}\]
+    \subsection{Площадь.}
+    \[S=\int_{a}^{b} y(x)dx\]
+    \[S=\int_{a}^{b} y(t)x'(t)dx\]
+    \[S=\frac 12 \int_{a}^{b} r^2(\phi)d\phi\]
+    \subsection{Длина.}
+    \[s=\int_{a}^{b} \sqrt{1+y'^2} dx\]
+    \[s=\int_{a}^{b} \sqrt{x'+y'^2} dt\]
+    \[s=\int_{a}^{b} \sqrt{r^2+r'^2} d\phi\]
+    \subsection{Объем.}
+    \[V=\pi \int_{a}^{b} y^2(x) dx\]
+    \[V=\pi \int_{a}^{b} y^2(t) x'(t) dx\]
+    \section{Эталонные интегралы.}
+    \begin{center}
+        \begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|}
+            \hline
+            Эталон & Сходится & Расходится \\
+            \hline
+            $\int_0^1 \frac{dx}{x^\alpha}$ & $\alpha < 1$ & $\alpha \geqslant 1$ \\
+            \hline
+            $\int_1^{+\infty} \frac{dx}{x^\alpha}$ & $\alpha > 1$ & $\alpha \leqslant 1$ \\
+            \hline
+            $\int_0^{+\infty} \frac{dx}{e^{\alpha x}}$ & $\alpha > 0$ & $\alpha \leqslant 0$ \\
+            \hline
+            $\int_{0}^{\frac 12} \frac{dx}{x^\alpha |\ln x|^\beta}$ & \shortstack{$\alpha < 1, \beta \in \RR$ \\или\\ $\alpha = 1, \beta>1$} & \shortstack{$\alpha > 1, \beta \in \RR$ \\или\\ $\alpha = 1, \beta\leqslant 1$} \\
+            \hline
+            $\int_{2}^{+\infty} \frac{dx}{x^\alpha \ln^\beta x}$ & \shortstack{$\alpha > 1, \beta \in \RR$ \\или\\ $\alpha = 1, \beta>1$} & \shortstack{$\alpha < 1, \beta \in \RR$ \\или\\ $\alpha = 1, \beta\leqslant 1$} \\
+            \hline
+            $\int_{1}^{+\infty} \frac{dx}{e^\alpha x^\beta}$ & \shortstack{$\alpha > 0, \beta \in \RR$ \\или\\ $\alpha = 0, \beta>1$} & \shortstack{$\alpha > 0, \beta \in \RR$ \\или\\ $\alpha = 0, \beta\leqslant 1$} \\
+            \hline
+            
+        \end{tabular}
+    \end{center}
 \end{document}
 

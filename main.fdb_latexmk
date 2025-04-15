@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1734698396.77391 "d:/mipt/Calculus/formuls/main.tex" "main.pdf" "main" 1734698398.02493 0
-  "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1730836629 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1741813751.10523 "d:/mipt/Calculus/formuls/main.tex" "main.pdf" "main" 1741813752.11511 0
+  "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1739297921 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1728.pk" 1728211214 45168 64e66cdfa25ede89a2027184be4ae537 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx2074.pk" 1728214444 54480 35546240f9e283345023193b305fad30 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1440.pk" 1728214441 32600 255aa3f1112839eabafed4d6ecd77f82 ""
@@ -32,6 +32,7 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -116,10 +117,10 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/svgnam.def" 1700127522 4705 ec4d2f4b7125d5a5145cc9aabae1d54b ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "d:/mipt/Calculus/formuls/main.tex" 1734698393 6330 8b18255c1e3cd501b3bbcd3df2d24ec1 ""
-  "main.aux" 1734698397 2294 5c937c93b79f55c1824b0e84c81e8442 "pdflatex"
-  "main.out" 1734698397 3100 cfa5989843f57e18fa108cd9b01507d7 "pdflatex"
-  "main.tex" 1734698393 6330 8b18255c1e3cd501b3bbcd3df2d24ec1 ""
+  "d:/mipt/Calculus/formuls/main.tex" 1741813750 9534 20dccc5764b033851d12faf7ea54619f ""
+  "main.aux" 1741813751 3146 694f1d62a4e636041a7bc2a365f5a7e2 "pdflatex"
+  "main.out" 1741813751 3973 5ddcdacadc5181f2607e86da927876fb "pdflatex"
+  "main.tex" 1741813750 9534 20dccc5764b033851d12faf7ea54619f ""
   "preamble.tex" 1730385536 4350 0af46efa7d0bed02b668f2644138d993 ""
   (generated)
   "main.aux"
